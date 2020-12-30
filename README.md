@@ -7,6 +7,8 @@ I finally came up with a version that I can share with you guys.
 
 # Installation
 You need pip to run the bot.
+https://www.python.org/downloads/
+https://pip.pypa.io/en/stable/installing/
 
 1) Execute the file 'installer.py'
 2) That's it! just run the 'BOT.py' file
