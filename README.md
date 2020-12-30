@@ -9,7 +9,7 @@ I finally came up with a version that I can share with you guys.
 You need pip to run the bot.
 
 1) Execute the file 'installer.py'
-2) That's it!
+2) That's it! just run the 'BOT.py' file
 
 If you have any troubles not grabbing chests, not fighting monsters,etc. Solutions will be posted in the next days. (you have to change the pictures on /bin/pics
 
