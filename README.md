@@ -6,11 +6,10 @@ I finally came up with a version that I can share with you guys.
 1920x1080 resolution only supported for now.
 
 # Installation
-You need pip to run the bot.
+You need pip to run the bot (included in the last version of python).
 
 https://www.python.org/downloads/
 
-https://pip.pypa.io/en/stable/installing/
 
 1) Execute the file 'installer.py'
 2) That's it! just run the 'BOT.py' file
