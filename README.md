@@ -13,6 +13,6 @@ You need pip to run the bot.
 
 If you have any troubles not grabbing chests, not fighting monsters,etc. Solutions will be posted in the next days. (you have to change the pictures on /bin/pics
 
-For any suggestion, bug or ideas DM me on discord: ElPeiretti#7260
+For any suggestion, bugs or ideas DM me on discord: ElPeiretti#7260
 
 Cheers!
