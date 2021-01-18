@@ -41,8 +41,10 @@ def bot():
             posx=pos[0]
             posy=pos[1]
             pyautogui.PAUSE=0.1
-            pyautogui.click(posx+10, posy+10)
-            pyautogui.click(960, 540)
+            pyautogui.moveTo(posx+10, posy+10)
+            pyautogui.click()
+            pyautogui.moveTo(960, 540)
+            pyautogui.click()
             pyautogui.click()
             pyautogui.PAUSE=0.01
             return True
@@ -70,10 +72,12 @@ def bot():
 
     def venderTodo2():
         time.sleep(0.1)
-        pyautogui.click(446, 624)
+        pyautogui.moveTo(446, 624)
+        pyautogui.click()
         time.sleep(0.3)
-        pyautogui.click(627,750)  
-        pyautogui.click(1407, 282)
+        pyautogui.moveTo(627,750)
+        pyautogui.click()  
+        pyautogui.moveTo(1407, 282)
         pyautogui.click()
 
     def tocarWachines():
@@ -114,7 +118,8 @@ def bot():
     while True:
         
         layer=0
-        pyautogui.click(134, 209)
+        pyautogui.moveTo(134, 209)
+        pyautogui.click()
         if(SELLALL):
             venderTodo2()
         
