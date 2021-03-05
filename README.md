@@ -14,8 +14,4 @@ https://www.python.org/downloads/
 1) Execute the file 'installer.py'
 2) That's it! just run the 'BOT.py' file
 
-If you have any troubles not grabbing chests, not fighting monsters,etc. Solutions will be posted in the next days. (you have to change the pictures on /bin/pics
-
-For any suggestion, bugs or ideas DM me on discord: ElPeiretti#7260
-
 Cheers!
