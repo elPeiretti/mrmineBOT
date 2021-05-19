@@ -7,22 +7,6 @@ import time
 ## finds the window handler for mr.mine's process
 ## if not found, returns -1
 
-def getMrMineWindowHandler():
-    hWndList = []
-    win32gui.EnumWindows( getMrMineWindowEnumHandler, hWndList)
-
-    if(not hWndList):
-        print("ERROR - Mr.Mine window not found. Is the game running?")
-        return -1
-    else:
-        return hWndList[0]
-
-def getMrMineWindowEnumHandler(hWnd, list):
-
-    if win32gui.GetWindowText(hWnd).find("Capacity:") != -1:
-        list.append(hWnd)
-
-
 
 # Simulates left click at position (x,y), in the window handled by hWnd
 def leftClick(x, y, hWnd):
@@ -45,17 +29,35 @@ def pressKey(key,hWnd):
     win32gui.SendMessage(hWnd,win32con.WM_KEYDOWN, key,0)
     win32gui.SendMessage(hWnd,win32con.WM_KEYUP, key,0)
 
+# returns the window's handler named WindowName
+# returns 0 if not found
+
+def getWindowHandlerByName(WindowName):
+    return win32gui.FindWindow(None,WindowName)
 
 
-handler = getMrMineWindowHandler()
+# returns a list of all the windows handlers that contains WindowName in their names
+# WindowName argument is a String type
+
+def getWindowHandlersContaining(WindowName):
+    
+    hWndList = []
+
+    win32gui.EnumWindows( lambda hWnd,list:  list.append(hWnd), hWndList)
+
+    return list(filter(lambda h: win32gui.GetWindowText(h).find(WindowName)!=-1, hWndList))
+
+
+hWnd = getWindowHandlersContaining("Capacity:")
+handler = hWnd[0]
 print (handler)
 x,y,w,h= win32gui.GetWindowRect(handler)
 print(x,y,w,h)
 
-SELLPOS = (int(0.225*w),int(0.5583*h))
+#SELLPOS = (int(0.225*w),int(0.5583*h))
 
-leftClick(SELLPOS[0],SELLPOS[1],handler)
-time.sleep(2)
-pressKey(win32con.VK_ESCAPE,handler)
+#leftClick(SELLPOS[0],SELLPOS[1],handler)
+#time.sleep(2)
+#pressKey(win32con.VK_ESCAPE,handler)
 
 
