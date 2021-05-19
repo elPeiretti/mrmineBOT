@@ -84,9 +84,6 @@ def setVenta():
 
     f.close()
 
-def save():
-    return
-
 
 
 if __name__ == '__main__':
@@ -97,7 +94,7 @@ if __name__ == '__main__':
     f.close()
 
     window = Tk()
-    window.geometry('100x130')
+    window.geometry('200x200')
     window.title("Mr.Mine BOT")
     
     btn_inic = Button(window, text="Start",command=boot,bg="Green")
