@@ -46,6 +46,9 @@ def process():
             posy=pos[1]
             InputEmulation.moveCursor(posx+10, posy+10,hWnd)
             InputEmulation.leftClick(posx+10, posy+10,hWnd)
+            InputEmulation.moveCursor(920, 610,hWnd)
+            InputEmulation.leftClick(920, 610,hWnd)
+            InputEmulation.leftClick(920, 610,hWnd)
             return True
         else:
             return False
