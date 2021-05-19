@@ -15,16 +15,29 @@ def setArmas():
     
     f.close()
 
+def disableAllButtons():
+    btn_inic.configure(bg="Gray73")
+    btn_inic['state'] = 'disabled' 
+    chk_chest['state'] = 'disabled'
+    chk_pelea['state'] = 'disabled'
+    chk_sellall['state'] = 'disabled'
+    spin_armas['state'] = 'disabled'
+    lbl_armas['state'] = 'disabled'
+
+def enableAllButtons():
+    btn_inic['state'] = 'normal'
+    btn_inic.configure(bg="Green")
+    btn_inic['state'] = 'normal' 
+    chk_chest['state'] = 'normal'
+    chk_pelea['state'] = 'normal'
+    chk_sellall['state'] = 'normal'
+    spin_armas['state'] = 'normal'
+    lbl_armas['state'] = 'normal'
+
 def boot():
 
     if(btn_inic['state'] == 'normal'):
-        btn_inic.configure(bg="Gray73")
-        btn_inic['state'] = 'disabled' 
-        chk_chest['state'] = 'disabled'
-        chk_pelea['state'] = 'disabled'
-        chk_sellall['state'] = 'disabled'
-        spin_armas['state'] = 'disabled'
-        lbl_armas['state'] = 'disabled'
+        disableAllButtons()
         setArmas()
 
         global bot_proc
@@ -43,15 +56,8 @@ def pause():
         global bot_proc
         bot_proc.terminate()
         bot_proc.join()
-
-        btn_inic['state'] = 'normal'
-        btn_inic.configure(bg="Green")
-        btn_inic['state'] = 'normal' 
-        chk_chest['state'] = 'normal'
-        chk_pelea['state'] = 'normal'
-        chk_sellall['state'] = 'normal'
-        spin_armas['state'] = 'normal'
-        lbl_armas['state'] = 'normal'
+        enableAllButtons()
+        
 
 def setCofres():
     f=open(PATH+"/bin/opt.bin","r+")
