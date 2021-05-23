@@ -8,7 +8,7 @@ import cv2
 import time
 import os
 
-from win32con import VK_DOWN
+from win32con import ATF_ONOFFFEEDBACK, CREATE_SEPARATE_WOW_VDM, VK_DOWN
 import InputEmulation
 
 PATH = os.path.dirname(os.path.realpath(__file__))  
@@ -87,19 +87,25 @@ def process():
             return False
 
     def pelear():
+        '''
+        CURRENTLY NOT WORKING
+
         cant=int(ARMAS/4)
         if(ARMAS%4!=0):
             cant+=1
-        
+        '''
         while hayPelea():
-            x=535
+            time.sleep(5)
+            '''
+            x=534
             for j in range(0,cant):
-                y=653
+                y=651
                 for i in range(0,4):
                     InputEmulation.moveCursor(x,y,hWnd)
                     InputEmulation.leftClick(x,y,hWnd)
                     y+=47
                 x+=202
+                '''
 
 
     while True:
@@ -110,7 +116,7 @@ def process():
 
         if(SELLALL):
             venderTodo()
-        
+
         while not (estaAlfinal()): #mientras no este en el final, busco wachines
         
             while COFRES and hayCofre():

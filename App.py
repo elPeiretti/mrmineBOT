@@ -114,13 +114,14 @@ if __name__ == '__main__':
     chk_state_sellall = IntVar()
     chk_state_chest = IntVar()
     chk_state_pelea = IntVar()
+    
     chk_sellall = Checkbutton(window, text='Sell Everything',var=chk_state_sellall,onvalue=1, offvalue=0,command=setVenta)
     chk_chest = Checkbutton(window, text='Grab Chests',var=chk_state_chest,onvalue=1, offvalue=0,command=setCofres)
     chk_pelea = Checkbutton(window, text='Fight Monsters',var=chk_state_pelea,onvalue=1, offvalue=0,command=setPelea)
 
     chk_sellall.grid(columnspan=2, row=2)
     chk_chest.grid(columnspan=2, row=3)
-    chk_pelea.grid(columnspan=2, row=4)
+    chk_pelea.grid(columnspan=2, row=4) 
 
 
     lbl_armas = Label(window,text="Weapons:")

@@ -1,8 +1,8 @@
+from logging import Handler
 import win32gui
 import win32api
 import win32con
 # https://docs.microsoft.com/en-us/windows/win32/inputdev/mouse-input-notifications
-import time
 
 ## finds the window handler for mr.mine's process
 ## if not found, returns -1
